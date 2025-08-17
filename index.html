@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Search Form -->
+        <form id="weatherForm">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="cityInput" class="input" placeholder="Enter City name" autocomplete="off" />
+            <button type="submit" class="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="error" id="errorMsg"></div>
+
+        <!-- Weather Container -->
+        <div class="container">
+            <img src="" alt="Weather Icon" class="tempImg fade-in" />
+            <h2 class="temp slide-up"><span></span>°C</h2>
+            <h3 class="cityName slide-up"></h3>
+            <div class="extra">
+                <div class="humidity slide-up">
+                    <div class="img">
+                        <img src="images/smoke.png" alt="Humidity" />
+                    </div>
+                    <div class="details">
+                        <h5 class="humidityRate"></h5>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind slide-up">
+                    <div class="img">
+                        <img src="images/wind.png" alt="Wind" />
+                    </div>
+                    <div class="details">
+                        <h5 class="windRate"></h5>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 404 Not Found -->
+        <div class="not-found">
+            <img src="images/404.png" alt="Not Found" class="fade-in" />
+            <h2 class="slide-up">City Not Found</h2>
+            <p class="slide-up">Please try searching again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
